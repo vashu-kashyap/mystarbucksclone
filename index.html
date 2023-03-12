@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Coffee Company</title>
+    <!-- main css style sheet  -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- --------------- google font cdn link --------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- --------------- font awesome icon kit cdn link --------------- -->
+
+    <script
+      src="https://kit.fontawesome.com/761fdd6338.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- --------------- fav icon link --------------- -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./images/favicon/site.webmanifest" />
+
+    <!-- --------------- swiper js css craousal cdn link --------------- -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- --------------- header start from here --------------- -->
+
+    <header>
+      <!-- --------------- navbar start --------------- -->
+      <nav
+        class="header-navbar flex justify-around items-center max-lg:hidden border-b-2 shadow-sm"
+      >
+        <div class="left flex items-center gap-x-8">
+          <div class="navbrand">
+            <a href="#">
+              <img src="./images/logo.png" class="w-10" alt="" />
+            </a>
+          </div>
+
+          <div class="navmenu">
+            <ul
+              class="font-inter capitalize flex text-text-1 font-light text-sm"
+            >
+              <li class="navitem py-6 px-8">
+                <a
+                  href="#"
+                  class="navlink font-semibold border-b-2 pb-2 border-primary-color"
+                  >home</a
+                >
+              </li>
+              <li class="navitem py-6 px-8">
+                <a href="#" class="navlink">gift</a>
+              </li>
+              <li class="navitem py-6 px-8">
+                <a href="#" class="navlink">order</a>
+              </li>
+              <li class="navitem py-6 px-8">
+                <a href="#" class="navlink">pay</a>
+              </li>
+              <li class="navitem py-6 px-8">
+                <a href="#" class="navlink">store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="right flex items-center gap-x-28">
+          <div
+            class="searchbar flex items-center border-2 px-4 rounded-full shadow-sm"
+          >
+            <img src="./images/search.svg" class="w-5 h-5" alt="" />
+            <input
+              type="text"
+              class="border-transparent capitalize text-sm w-60"
+              name="search"
+              placeholder="looking for something specific"
+            />
+          </div>
+
+          <div class="user">
+            <a href="#"
+              ><img src="./images/user.svg" class="w-8 h-8" alt=""
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <!-- --------------- navbar end --------------- -->
+
+      <!-- --------------- mobile nav start from here --------------- -->
+
+      <div class="lg:hidden relative">
+        <div class="m-nav">
+          <ul
+            class="mobile-menu text-white px-10 py-5 flex justify-between w-full absolute"
+          >
+            <li
+              class="nav-item text-2xl hover:text-primary-color duration-300 transition-all rounded-full"
+            >
+              <a href="#">
+                <i class="fa-solid fa-store"></i>
+              </a>
+            </li>
+            <li
+              class="nav-item text-2xl hover:text-primary-color duration-300 transition-all rounded-full"
+            >
+              <a href="#">
+                <i class="fa-regular fa-user"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="./images/Welcome_Website_Amar_2_fa49b7f3d7.jpg"
+          class="h-60 w-full object-cover object-center"
+          alt=""
+        />
+      </div>
+
+      <div class="bottom-nav bg-neutral-50 px-10 lg:hidden  fixed w-full bottom-0 z-50 py-2 shadow-lg ">
+        <ul class="bottom-nav-menu flex justify-between text-text-1 font-inter ">
+          <li class="nav-item text-center ">
+            <i class="fa-solid fa-house text-primary-color"></i>
+            <p class="text-[12px]">Home</p>
+          </li>
+
+          <li class="nav-item text-center">
+            <i class="fa-solid fa-gift text-primary-color"></i>
+            <p class="text-[12px]">Gift</p>
+          </li>
+
+          <li class="nav-item text-center">
+            <i class="fa-solid fa-mug-hot text-primary-color"></i>
+            <p class="text-[12px]">Order</p>
+          </li>
+
+          <li class="nav-item text-center">
+            <i class="fa-regular fa-credit-card text-primary-color"></i>
+            <p class="text-[12px]">Pay</p>
+          </li>
+
+          <li class="nav-item text-center">
+            <i class="fa-solid fa-magnifying-glass text-primary-color"></i>
+            <p class="text-[12px]">Search</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- --------------- mobile nav end from here --------------- -->
+
+      <!-- --------------- sign up card --------------- -->
+
+      <div
+        class="signup flex justify-between max-lg:px-10 px-32 bg-bg-color py-3 items-center font-inter shadow-md max-sm:px-5"
+      >
+        <h5 class="text-white fon text-xl max-sm:text-sm max-sm:font-light">
+          Rewards are pouring! Sign up now.
+        </h5>
+
+        <button
+          class="text-white capitalize text-sm border-2 px-5 py-2.5 rounded-full hover:bg-white hover:text-bg-color duration-500 transition max-sm:text-sm max-sm:px-2 max-sm:py-1"
+        >
+          know more
+        </button>
+      </div>
+    </header>
+
+    <!-- --------------- header page start end here --------------- -->
+
+    <!-- --------------- product section start --------------- -->
+
+    <section class="product-menu px-32 mt-10 max-lg:px-10 max-sm:px-5">
+      <h2 class="text-2xl font-inter font-bold my-6">Handcrafted Curations</h2>
+
+      <div
+        class="menu-container flex justify-between max-sm:grid max-sm:grid-cols-3 max-sm:grid-rows-2 max-sm:gap-x gap-y-5"
+      >
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/Bestseller.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Bestseller</p>
+        </div>
+
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/Drinks.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Drinks</p>
+        </div>
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/Food.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Food</p>
+        </div>
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/Merchandise.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Merchandise</p>
+        </div>
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/CoffeeAtHome.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Coffee At Home</p>
+        </div>
+        <div class="menu-card flex flex-col items-center">
+          <img
+            src="./images/ReadyToEat.jpg"
+            class="w-[108px] max-sm:w-[90px] rounded-full hover:border-2 border-primary-color"
+            alt=""
+          />
+          <p class="font-semibold">Ready to Eat</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------- product section end --------------- -->
+
+    <!-- --------------- product section 2 start --------------- -->
+
+    <section
+      class="barista px-32 pb-4 flex flex-col justify-center mt-10 bg-bg-color2 relative max-lg:px-10 max-sm:px-5"
+    >
+      <img
+        src="./images/greyleafright.svg"
+        class="w-14 h-20 absolute -top-4 right-0"
+        alt=""
+      />
+
+      <h2 class="text-2xl font-inter font-bold py-6">Barista Recommends</h2>
+
+      <!-- Swiper -->
+      <div class="swiper product-swiper w-full h-full">
+        <div class="swiper-wrapper pb-14">
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="card w-[410px] h-[160px] bg-neutral-50 px-6 py-3 font-inter border-2 rounded-lg max-lg:w-[314px] shadow-md"
+            >
+              <div class="row1 flex gap-x-5">
+                <div class="img">
+                  <img
+                    src="./images/Bestseller.jpg"
+                    class="w-20 rounded-lg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="details mt-1">
+                  <img src="./images/veg.svg" alt="" />
+                  <h3 class="font-bold max-lg:text-sm">
+                    Java Chip Frappuccino
+                  </h3>
+                  <p class="text-[10px] text-gray-500">TALL(354 ML).392 kcal</p>
+                </div>
+              </div>
+
+              <div class="row2 flex items-center justify-between mt-3">
+                <div class="price">
+                  <h4 class="text-lg font-semibold">&#8377; 354.75</h4>
+                </div>
+
+                <div
+                  class="button capitalize font-extrabold bg-primary-color py-2 px-6 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+                >
+                  add item
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="card w-[410px] h-[160px] bg-neutral-50 px-6 py-3 font-inter border-2 rounded-lg max-lg:w-[314px] shadow-md"
+            >
+              <div class="row1 flex gap-x-5">
+                <div class="img">
+                  <img
+                    src="./images/105468.webp"
+                    class="w-20 h-20 object-cover rounded-lg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="details mt-1">
+                  <img src="./images/veg.svg" alt="" />
+                  <h3 class="font-bold capitalize max-lg:text-sm">
+                    cold Coffee
+                  </h3>
+                  <p class="text-[10px] text-gray-500">TALL(354 ML).354 kcal</p>
+                </div>
+              </div>
+
+              <div class="row2 flex items-center justify-between mt-3">
+                <div class="price">
+                  <h4 class="text-lg font-semibold">&#8377; 351.75</h4>
+                </div>
+
+                <div
+                  class="button capitalize font-extrabold bg-primary-color py-2 px-6 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+                >
+                  add item
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="card w-[410px] h-[160px] bg-neutral-50 px-6 py-3 font-inter border-2 rounded-lg max-lg:w-[314px] shadow-md"
+            >
+              <div class="row1 flex gap-x-5">
+                <div class="img">
+                  <img
+                    src="./images/105000.webp"
+                    class="w-20 h-20 object-cover rounded-lg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="details mt-1">
+                  <img src="./images/veg.svg" alt="" />
+                  <h3 class="font-bold capitalize max-lg:text-sm">
+                    vanilla sweet cream cold brew
+                  </h3>
+                  <p class="text-[10px] text-gray-500">TALL(354 ML).63 kcal</p>
+                </div>
+              </div>
+
+              <div class="row2 flex items-center justify-between mt-3">
+                <div class="price">
+                  <h4 class="text-lg font-semibold">&#8377; 383.25</h4>
+                </div>
+
+                <div
+                  class="button capitalize font-extrabold bg-primary-color py-2 px-6 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+                >
+                  add item
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="card w-[410px] h-[160px] bg-neutral-50 px-6 py-3 font-inter border-2 rounded-lg max-lg:w-[314px] shadow-md"
+            >
+              <div class="row1 flex gap-x-5">
+                <div class="img">
+                  <img
+                    src="./images/100447.webp"
+                    class="w-20 h-20 object-cover rounded-lg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="details mt-1">
+                  <img src="./images/veg.svg" alt="" />
+                  <h3 class="font-bold capitalize max-lg:text-sm">
+                    signature hot chocolate
+                  </h3>
+                  <p class="text-[10px] text-gray-500">TALL(237 ML).284 kcal</p>
+                </div>
+              </div>
+
+              <div class="row2 flex items-center justify-between mt-3">
+                <div class="price">
+                  <h4 class="text-lg font-semibold">&#8377; 278.25</h4>
+                </div>
+
+                <div
+                  class="button capitalize font-extrabold bg-primary-color py-2 px-6 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+                >
+                  add item
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="card w-[410px] h-[160px] bg-neutral-50 px-6 py-3 font-inter border-2 rounded-lg max-lg:w-[314px] max-lg:text-sm shadow-md"
+            >
+              <div class="row1 flex gap-x-5">
+                <div class="img">
+                  <img
+                    src="./images/100377.webp"
+                    class="w-20 h-20 object-cover rounded-lg"
+                    alt=""
+                  />
+                </div>
+
+                <div class="details mt-1">
+                  <img src="./images/veg.svg" alt="" />
+                  <h3 class="font-bold capitalize max-lg:text-sm">
+                    caffe latte
+                  </h3>
+                  <p class="text-[10px] text-gray-500">TALL(237 ML).104 kcal</p>
+                </div>
+              </div>
+
+              <div class="row2 flex items-center justify-between mt-3">
+                <div class="price">
+                  <h4 class="text-lg font-semibold">&#8377; 273.00</h4>
+                </div>
+
+                <div
+                  class="button capitalize font-extrabold bg-primary-color py-2 px-6 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+                >
+                  add item
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="swiper-button-next product-swiper-next bg-neutral-50 shadow-xl px-5 rounded-full mr-[100px] max-lg:mr-2 max-sm:mr-0"
+      >
+        <i class="fa-solid fa-arrow-right text-2xl text-primary-color"></i>
+      </div>
+      <div
+        class="swiper-button-prev product-swiper-perv bg-neutral-50 shadow-xl px-5 rounded-full ml-[100px] max-lg:ml-2 max-sm:ml-0"
+      >
+        <i class="fa-solid fa-arrow-left text-2xl text-primary-color"></i>
+      </div>
+    </section>
+
+    <!-- --------------- product section 2 end --------------- -->
+
+    <!-- --------------- banner section start from here --------------- -->
+
+    <section
+      class="banner-section px-32 pb-4 flex flex-col justify-center mt-10 relative max-lg:px-10 max-sm:px-5"
+    >
+      <div class="swiper banner-swiper w-full h-full">
+        <div class="swiper-wrapper py-10">
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="banner w-full h-56 bg-[#edd15b] rounded-lg shadow-lg flex"
+            >
+              <div class="img">
+                <img
+                  src="./images/Group_1629_71e8269b27.png"
+                  class="w-28 max-sm:w-24 max-lg:mt-7 mt-4"
+                  alt=""
+                />
+              </div>
+
+              <div class="content py-8 max-sm:w-60 w-full md:px-16">
+                <div class="text-content w-full">
+                  <p class="text-sm font-inter font-light">
+                    It's The Season Of
+                  </p>
+                  <p class="text-xl font-inter font-semibold mt-4 max-sm:mt-2">
+                    Colorful Celebrations
+                  </p>
+                  <p
+                    class="font-inter text-sm max-lg:text-sm font-light mt-4 max-sm:mt-2"
+                  >
+                    Celebrate Holi with a delicious dash of Starbucks Love. Try
+                    Flavours of Holi Frappuccino today!
+                  </p>
+                </div>
+
+                <div
+                  class="price-order-button flex justify-between items-center mt-8 max-lg:mt-3"
+                >
+                  <div class="price">
+                    <p class="text-sm font-inter font-light">For</p>
+                    <p class="text-sm font-inter font-semibold">
+                      &#8377; 472.00
+                    </p>
+                  </div>
+
+                  <div
+                    class="order-button bg-primary-color rounded-full text-white py-3 px-14 max-lg:py-2 max-lg:px-5"
+                  >
+                    <button class="capitalize text-sm font-inter font-bold">
+                      order now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide flex justify-center items-center">
+            <div
+              class="banner w-full h-56 bg-[#00b388] rounded-lg shadow-lg flex"
+            >
+              <div class="img">
+                <img
+                  src="./images/Tribute_Blend_035288e3ca.png"
+                  class="w-28 max-sm:w-24 max-lg:mt-7 mt-4"
+                  alt=""
+                />
+              </div>
+
+              <div class="content py-8 max-sm:w-60 w-full md:px-16 text-white">
+                <div class="text-content w-full">
+                  <p class="text-sm font-inter font-light">Presenting</p>
+                  <p class="text-lg font-inter font-semibold mt-4 max-sm:mt-2">
+                    Tribute Blend Wholebean
+                  </p>
+                  <p
+                    class="font-inter text-sm max-lg:text-sm font-light mt-4 max-sm:mt-2"
+                  >
+                    C Medium roast blend of coffee from four regions. Enjoy the
+                    notes of black berry and baking spices.
+                  </p>
+                </div>
+
+                <div
+                  class="price-order-button flex justify-between items-center mt-8 max-lg:mt-3"
+                >
+                  <div class="price">
+                    <p class="text-sm font-inter font-light">For</p>
+                    <p class="text-sm font-inter font-semibold">
+                      &#8377; 1400.00
+                    </p>
+                  </div>
+
+                  <div
+                    class="order-button bg-white rounded-full text-black py-3 px-14 max-lg:py-2 max-lg:px-5"
+                  >
+                    <button class="capitalize text-sm font-inter font-bold">
+                      order now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="swiper-button-next banner-swiper-next bg-neutral-50 shadow-xl px-5 rounded-full mr-[100px] max-lg:mr-2 max-sm:mr-0"
+      >
+        <i class="fa-solid fa-arrow-right text-2xl text-primary-color"></i>
+      </div>
+      <div
+        class="swiper-button-prev banner-swiper-perv bg-neutral-50 shadow-xl px-5 rounded-full ml-[100px] max-lg:ml-2 max-sm:ml-0"
+      >
+        <i class="fa-solid fa-arrow-left text-2xl text-primary-color"></i>
+      </div>
+    </section>
+
+    <!-- --------------- banner section end from here --------------- -->
+
+    <section
+      class="commitement product-menu px-32 mt-10 max-lg:px-10 max-sm:px-5 bg-bg-color2 pb-10"
+    >
+      <h2 class="text-2xl font-inter text-text-1 font-extrabold py-6">
+        Learn more about the world of coffee!
+      </h2>
+
+      <div
+        class="container w-full max-sm:h-96 group/opacity bg-black rounded-md relative"
+      >
+        <div
+          class="img opacity-70 group-hover/opacity:opacity-40 transition-all duration-700 max-sm:h-96"
+        >
+          <img
+            src="./images/20221212_PA_018_Coffee_Processing_Storytelling_FY_23_002_1_60fe335129.jpg"
+            class="rounded-md max-sm:h-96 object-cover"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="content absolute top-0 w-full h-full p-3 flex flex-col justify-between"
+        >
+          <div class="top ml-5 mb-2">
+            <button
+              class="text-primary-color font-inter font-bold text-[12px] bg-white px-2 py-1 rounded-md"
+            >
+              coffee culture
+            </button>
+          </div>
+
+          <div class="bottom mb-5 max-lg:mb-1 ml-5">
+            <h2
+              class="text-white text-3xl max-lg:text-xl font-semibold font-inter max-lg:mb-2 mb-5"
+            >
+              Starbucks’ Commitment To Sustainability
+            </h2>
+
+            <p
+              class="text-white max-lg:text-[12px] font-inter font-light mb-10 max-lg:mb-2"
+            >
+              With sustainable practices and high-quality standards, Starbucks
+              is committed to good coffee and the good of the earth.
+            </p>
+
+            <button
+              class="learnmore capitalize text-text-1 bg-white text-[12px] font-bold px-16 py-2 rounded-full hover:bg-gray-100 duration-300"
+            >
+              learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------- banner section end here ---------------  -->
+
+    <!-- --------------- news section start from here --------------- -->
+
+    <section class="news commitement px-32 mt-5 max-lg:px-10 max-sm:px-5 pb-10">
+      <h2 class="text-2xl font-inter text-text-1 font-extrabold py-6">
+        We have news for you!
+      </h2>
+
+      <div class="card-container rounded-lg">
+        <div class="news-card max-w-sm border-2 rounded-lg shadow-lg">
+          <div class="img">
+            <img
+              src="./images/mysuru1_1_2df9c3933a.jpg"
+              class="h-60 w-full object-cover rounded-t-lg"
+              alt=""
+            />
+          </div>
+
+          <div class="news-content px-3 mt-2">
+            <h5 class="text-xl font-semibold font-inter">
+              New Store in Mysuru
+            </h5>
+            <p class="text-sm font-inter font-light mt-5">
+              Tata Starbucks expands its footprint in Southern India with the
+              opening of
+            </p>
+
+            <div
+              class="button capitalize font-extrabold bg-primary-color py-2 px-6 w-32 text-center my-8 text-white rounded-full text-[12px] shadow-xl hover:bg-text-1 transition duration-300"
+            >
+              know more
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------- news section start end here --------------- -->
+
+    <!-- --------------- footer section start from here  --------------- -->
+
+    <footer class="px-32 mt-5 max-lg:px-10 max-sm:px-5 bg-bg-color pt-16 max-lg:hidden">
+      <div
+        class="f-link-container flex justify-between mb-16 max-lg:flex-wrap max-sm:grid max-sm:grid-cols-2 max-sm:gap-y-5"
+      >
+        <div class="col-1">
+          <img src="./images/logo.png" alt="" />
+        </div>
+
+        <div class="col-2 capitalize text-white font-inter">
+          <ul class="text-sm">
+            <li class="text-xl font-medium"><a href="#">about us</a></li>
+            <li class="mt-8"><a href="#">our company</a></li>
+            <li class="mt-8"><a href="#">our heritage</a></li>
+            <li class="mt-8"><a href="#">coffeehouse</a></li>
+          </ul>
+        </div>
+
+        <div class="col-3 capitalize text-white font-inter">
+          <ul class="text-sm">
+            <li class="text-xl font-medium"><a href="#">Responsibility</a></li>
+            <li class="mt-8"><a href="#">Community</a></li>
+            <li class="mt-8"><a href="#">Ethical Sourcing</a></li>
+            <li class="mt-8"><a href="#">Environment</a></li>
+            <li class="mt-8"><a href="#">Diversity</a></li>
+          </ul>
+        </div>
+
+        <div class="col-4 capitalize text-white font-inter">
+          <ul class="text-sm">
+            <li class="text-xl font-medium"><a href="#">Quick Links</a></li>
+            <li class="mt-8"><a href="#">Delivery</a></li>
+            <li class="mt-8"><a href="#">Season's Gifting</a></li>
+            <li class="mt-8"><a href="#">careers</a></li>
+            <li class="mt-8"><a href="#">Customer Service</a></li>
+            <li class="mt-8"><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-5 uppercase text-white font-inter">
+          <h4 class="text-xl font-medium"><a href="#">social media</a></h4>
+          <ul
+            class="text-3xl flex justify-between max-sm:justify-start gap-x-10"
+          >
+            <li class="mt-5">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li class="mt-5">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </li>
+            <li class="mt-5">
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-5">
+          <ul>
+            <li>
+              <a href="#"><img src="./images/appstoreAndroid.png" alt="" /></a>
+            </li>
+            <li class="mt-3">
+              <a href="#"><img src="./images/appstoreiOS.png" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        class="copywrite text-white font-inter flex justify-between items-center border-t-[1px] py-8 max-sm:flex-col"
+      >
+        <ul
+          class="text-[12px] font-extralight flex gap-x-6 max-lg:gap-3 max-lg:text-center"
+        >
+          <li class="pr-8 max-lg:pr-4 border-r-2">
+            <a href="#">Web Accessiblity</a>
+          </li>
+          <li class="pr-8 max-lg:pr-4 border-r-2">
+            <a href="#">Privacy Statement</a>
+          </li>
+          <li class="pr-8 max-lg:pr-4 border-r-2">
+            <a href="#">Terms of Use</a>
+          </li>
+          <li class="pr-8 max-lg:pr-4 border-r-2">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+
+        <p class="copy text-[10px] font-light max-sm:mt-5">
+          &copy; Starbucks Coffee Company. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- --------------- footer section end from here  --------------- -->
+
+    <!-- --------------- swiper js craousal cdn link --------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- flowbite javascript file link  -->
+    <script src="/./node_modules/flowbite/dist/flowbite.min.js"></script>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
